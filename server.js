@@ -1,8 +1,14 @@
 import express from 'express';
+import mustache from 'mustache-express';
+
 const app = express();
 
+app.set('views', './views');
+app.set('view engine', 'mustache');
+app.engine('html', mustache());
+
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.render('index.html');
 });
 
 
