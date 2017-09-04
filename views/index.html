@@ -1,9 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-  Welcome to Node OAuth example! Please click the button to log in.
-  <form action="/login" method = "POST">
-      <input type="submit" value="Login" />
-  </form>
+  {{#name}}
+    <p>Welcome back, {{name}}!</p>
+    <a href='/logout'>Logout</a>
+  {{/name}}
+  {{^name}}
+    <p>Welcome to the Node OAuth example.</p>
+    <p>Please click the button to log in.</p>
+    <a href="/auth/google">Sign in with Google</a>
+  {{/name}}
 </body>
 </html>
