@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pre-build": "mkdir -p build",
+    "build": "webpack",
+    "start": "node build/bundle.js",
+    "start-dev": "nodemon build/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +19,19 @@
   "bugs": {
     "url": "https://github.com/becdot/node_oauth/issues"
   },
-  "homepage": "https://github.com/becdot/node_oauth#readme"
+  "homepage": "https://github.com/becdot/node_oauth#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.6.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0",
+    "webpack": "^3.5.5"
+  }
 }
